@@ -9,7 +9,7 @@
             $query = "INSERT INTO `contacts` (source_id, name, phone, email) VALUES";
             $format = ' (%s, "%s", %s, "%s"),';
             foreach ($arr as $value) {
-                $query .= sprintf($format, $source_id, $value->name, $value->phone, $value->email);
+                $query .= sprintf($format, $source_id, $value->name, substr($value->phone, -10), $value->email);
             }
            $res = $conn->exec(substr_replace($query,';',-1));
 

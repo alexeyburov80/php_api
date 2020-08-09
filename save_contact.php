@@ -4,7 +4,7 @@
 	if(ISSET($_POST['save'])){
 		$source_id = $_POST['source_id'];
 		$name = $_POST['name'];
-		$phone = $_POST['phone'];
+		$phone =  substr($_POST['phone'], -10);
 		$email = $_POST['email'];
 		
 		$query = "INSERT INTO `contacts` (source_id, name, phone, email) VALUES(:source_id, :name, :phone, :email)";

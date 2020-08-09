@@ -5,7 +5,7 @@
 		$id = $_POST['id'];
 		$source_id = $_POST['source_id'];
 		$name = $_POST['name'];
-		$phone = $_POST['phone'];
+        $phone =  substr($_POST['phone'], -10);
 		$email = $_POST['email'];
 
 		$query = "UPDATE `contacts` SET `source_id` = :source_id, `name` = :name, `phone` = :phone, `email` = :email WHERE `id` = :id";
