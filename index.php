@@ -104,8 +104,7 @@
     </table>
 
     <form method="POST" action="insert_array.php">
-        <textarea id="contact_list" name="contact_list">
-
+        <textarea class="form-control" rows="9" id="contact_list" name="contact_list">
             {
                 "source_id": 1,
                 "items": [
