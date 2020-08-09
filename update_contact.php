@@ -8,7 +8,6 @@
 		$phone = $_POST['phone'];
 		$email = $_POST['email'];
 
-		//$query = "UPDATE `contacts` SET `source_id` = :source_id, `name` = :name, `phone` = :phone, `email` = :email WHERE `id` = :id";
 		$query = "UPDATE `contacts` SET `source_id` = :source_id, `name` = :name, `phone` = :phone, `email` = :email WHERE `id` = :id";
 
 		$stmt = $conn->prepare($query);

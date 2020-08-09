@@ -14,7 +14,9 @@
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#form_modal"><span
                 class="glyphicon glyphicon-plus"></span> Add Contact
     </button>
+    <h4 class="info text-primary"><?php echo 'added '.$_GET["response"] .' lines' ?></h4>
     <br/><br/ >
+
     <table class="table table-bordered">
         <thead class="alert-info">
         <tr>
@@ -100,6 +102,22 @@
         ?>
         </tbody>
     </table>
+
+    <form method="POST" action="insert_array.php">
+        <textarea id="contact_list" name="contact_list">
+
+            {
+                "source_id": 1,
+                "items": [
+                    { "name": "Анна", "phone": 9001234453, "email": "mail1@gmail.com" },
+                    { "name": "Иван", "phone": "+79001234123", "email": "mail2@gmail.com" }
+                ]
+            }
+
+        </textarea>
+        <button class="btn btn-primary" name="array">Add array</button>
+    </form>
+
 </div>
 <div class="modal fade" id="form_modal" aria-hidden="true">
     <div class="modal-dialog">
